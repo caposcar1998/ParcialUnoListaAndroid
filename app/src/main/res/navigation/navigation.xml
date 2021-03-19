@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fightersFragment">
+
+    <fragment
+        android:id="@+id/fightersFragment"
+        android:name="edu.itesm.parcialuno.FightersFragment"
+        android:label="fragment_fighters"
+        tools:layout="@layout/fragment_fighters" >
+        <action
+            android:id="@+id/action_fightersFragment_to_fighterFragment"
+            app:destination="@id/fighterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fighterFragment"
+        android:name="edu.itesm.parcialuno.fighterFragment"
+        android:label="fragment_fighter"
+        tools:layout="@layout/fragment_fighter" >
+        <argument
+            android:name="fighter"
+            app:argType="edu.itesm.parcialuno.Fighter" />
+    </fragment>
+</navigation>
